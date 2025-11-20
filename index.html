@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amie Pimentel | Business Transformation & Process Excellence</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc; /* Light subtle blue background */
+        }
+        .hero-bg {
+            background-color: #0b1a2d; /* Deep Navy Blue */
+            background-image: radial-gradient(at 0% 0%, #1c3251 0%, transparent 50%),
+                              radial-gradient(at 100% 100%, #082d49 0%, transparent 50%);
+        }
+        .skill-chip {
+            border: 1px solid #10b981; /* Emerald Green border */
+            color: #047857; /* Dark Emerald text */
+            background-color: #d1fae5; /* Light Green background */
+        }
+        .project-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        /* Styling based on AMIE logo colors */
+        .amie-logo-text {
+            color: #1c3251; /* Deep Blue from logo */
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 800; /* font-extrabold */
+        }
+        .amie-slogan-text {
+            color: #10b981; /* Teal/Green from logo */
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 500; /* font-medium */
+        }
+    </style>
+    <!-- Lucide icons for clean UI -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation (Updated with Logo Text) -->
+    <header class="shadow-lg sticky top-0 z-10 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- AMIE Logo Text Placeholder -->
+                <span class="amie-logo-text">AMIE</span>
+                <span class="amie-slogan-text hidden sm:inline">Align. Measure. Innovate. Empower.</span>
+            </div>
+            <nav class="hidden md:flex space-x-6 font-medium">
+                <a href="#about" class="text-gray-600 hover:text-[#10b981] transition duration-200">About</a>
+                <a href="#services" class="text-gray-600 hover:text-[#10b981] transition duration-200">Services</a>
+                <a href="#projects" class="text-gray-600 hover:text-[#10b981] transition duration-200">Projects</a>
+                <a href="#contact" class="text-white bg-[#10b981] px-4 py-2 rounded-full hover:bg-[#059669] transition duration-200 shadow-md">Get in Touch</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Drawer (Hidden by default) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-20 bg-gray-900 bg-opacity-90">
+        <div class="flex justify-end p-6">
+            <button id="close-menu-button" class="text-white focus:outline-none">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center space-y-6 text-2xl font-semibold text-white mt-10">
+            <a href="#about" class="hover:text-[#10b981] transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+            <a href="#services" class="hover:text-[#10b981] transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a>
+            <a href="#projects" class="hover:text-[#10b981] transition duration-200" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects</a>
+            <a href="#contact" class="text-white bg-[#10b981] px-6 py-3 rounded-lg hover:bg-[#059669] transition duration-200 shadow-xl" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Hire Me</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-3/5 space-y-6 text-center md:text-left">
+                <span class="text-lg text-emerald-400 font-semibold uppercase tracking-widest">Business Transformation Lead & Freelancer</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                    Driving <span class="text-[#10b981] block md:inline">Operational Excellence</span> and Measurable Savings
+                </h1>
+                <p class="text-xl text-gray-300 max-w-lg mx-auto md:mx-0">
+                    Results-driven specialist with proven success in process improvement, KPI implementation, and delivering significant annualized savings.
+                </p>
+                <div class="flex justify-center md:justify-start space-x-4 pt-4">
+                    <a href="#contact" class="px-8 py-3 bg-[#10b981] text-white font-semibold rounded-full shadow-lg hover:bg-[#059669] transition duration-300 flex items-center">
+                        <i data-lucide="briefcase" class="w-5 h-5 mr-2"></i> Discuss a Project
+                    </a>
+                    <a href="#projects" class="px-8 py-3 border border-gray-400 text-gray-200 font-semibold rounded-full hover:bg-white hover:text-[#0b1a2d] transition duration-300 flex items-center">
+                        <i data-lucide="bar-chart-2" class="w-5 h-5 mr-2"></i> View Results
+                    </a>
+                </div>
+            </div>
+            <!-- Profile Image Placeholder - Replace with actual image -->
+            <div class="md:w-2/5 mt-10 md:mt-0 flex justify-center">
+                <img src="https://placehold.co/300x300/10b981/ffffff?text=Amie+Pimentel" alt="Amie Claire Pimentel" class="rounded-full object-cover w-64 h-64 border-8 border-emerald-500 shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Expertise Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">My Core Expertise</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                I specialize in turning complex, inefficient processes into streamlined, high-performance operations using data-driven methodologies.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Competency 1: Process Improvement -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-[#10b981]">
+                    <i data-lucide="rocket" class="w-10 h-10 text-[#10b981] mb-4 mx-auto"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Process Improvement</h3>
+                    <p class="text-gray-600">Certified in Six Sigma (Yellow & Greenbelt Trained), I eliminate waste, reduce variance, and optimize workflows to boost efficiency.</p>
+                </div>
+
+                <!-- Competency 2: Data Analysis & KPI -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-teal-500">
+                    <i data-lucide="bar-chart-3" class="w-10 h-10 text-teal-500 mb-4 mx-auto"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Data & KPI Implementation</h3>
+                    <p class="text-gray-600">I develop real-time dashboards and analytics platforms (Looker Studio, PLX) to drive data-informed management decisions.</p>
+                </div>
+
+                <!-- Competency 3: Training & Adoption -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-cyan-500">
+                    <i data-lucide="graduation-cap" class="w-10 h-10 text-cyan-500 mb-4 mx-auto"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Training & Mentorship</h3>
+                    <p class="text-gray-600">I develop and deliver training on Operational/Delivery Excellence, ensuring successful adoption of new business processes.</p>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Skills & Tools</h4>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="skill-chip px-3 py-1 rounded-full text-sm font-medium">Six Sigma</span>
+                    <span class="skill-chip px-3 py-1 rounded-full text-sm font-medium">Operational Efficiency</span>
+                    <span class="skill-chip px-3 py-1 rounded-full text-sm font-medium">Data Analysis</span>
+                    <span class="skill-chip px-3 py-1 rounded-full text-sm font-medium">Google Data Analytics</span>
+                    <span class="skill-chip px-3 py-1 rounded-full text-sm font-medium">Apps Script</span>
+                    <span class="skill-chip px-3 py-1 rounded-full text-sm font-medium">Looker Studio</span>
+                    <span class="skill-chip px-3 py-1 rounded-full text-sm font-medium">Training Delivery</span>
+                    <span class="skill-chip px-3 py-1 rounded-full text-sm font-medium">Client Relations</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-[#e6f4f1]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">How I Transform Your Business</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                I offer targeted services to optimize your operations and achieve measurable ROI.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="p-8 bg-white rounded-xl shadow-xl text-left">
+                    <div class="flex items-center space-x-3 mb-4 text-[#10b981]">
+                        <i data-lucide="workflow" class="w-7 h-7"></i>
+                        <h3 class="text-2xl font-bold">Process Mapping & Redesign</h3>
+                    </div>
+                    <p class="text-gray-600">Identify bottlenecks, map current state processes, and design future-state workflows that are leaner, faster, and less error-prone.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="p-8 bg-white rounded-xl shadow-xl text-left">
+                    <div class="flex items-center space-x-3 mb-4 text-[#10b981]">
+                        <i data-lucide="trending-up" class="w-7 h-7"></i>
+                        <h3 class="text-2xl font-bold">Performance Analytics & Reporting</h3>
+                    </div>
+                    <p class="text-gray-600">Build automated, centralized dashboards (Product Area Dashboard, Quality Toolkit) for real-time KPI monitoring and strategic decision-making.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="p-8 bg-white rounded-xl shadow-xl text-left">
+                    <div class="flex items-center space-x-3 mb-4 text-[#10b981]">
+                        <i data-lucide="layers" class="w-7 h-7"></i>
+                        <h3 class="text-2xl font-bold">Tool Automation & Compliance</h3>
+                    </div>
+                    <p class="text-gray-600">Develop custom automation scripts and compliance tools (Apps Script, SLO Tracker) to ensure consistency and guarantee adherence to standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Measurable Transformation Projects</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A look at specific projects that have delivered quantifiable results and operational stability.
+                </p>
+            </div>
+
+            <div class="space-y-10">
+                <!-- Project 1: Automated Knowledge Base/Chatbot -->
+                <div class="project-card bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <i data-lucide="bot" class="w-12 h-12 text-green-600"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900">AI-Powered Knowledge Base/Chatbot (WFP Specialists)</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">AI-Powered Knowledge & Documentation Leveraging</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Description:</span> AI solution integrating a knowledge base/chatbot (via Notebook LM) to provide instant answers and leverage documentation.</li>
+                            <li><span class="font-semibold">Impact:</span> Significant reduction in time spent searching for resources.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 md:text-right">
+                        <p class="text-4xl font-extrabold text-[#10b981] leading-none">$896,253</p>
+                        <p class="text-sm font-medium text-gray-500">ANNUALIZED SAVINGS (5.38 FTE)</p>
+                    </div>
+                </div>
+
+                <!-- Project 2: Centralized Platform (Vendor Management & PA Metrics) -->
+                <div class="project-card bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <i data-lucide="gauge" class="w-12 h-12 text-blue-600"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900">Centralized Tracking Platform (PA & Vendor Metrics)</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Tracking, Analyzing, and Visualizing Product Area Metrics</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Goal:</span> Centralized platform dedicated to tracking, analyzing, and visualizing Product Area (PA) metrics.</li>
+                            <li><span class="font-semibold">Impact:</span> Enhanced visibility into the vendor landscape and WFP support for the Vendor Management Office (VMO).</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 md:text-right">
+                        <p class="text-4xl font-extrabold text-[#10b981] leading-none">$576,396</p>
+                        <p class="text-sm font-medium text-gray-500">ANNUALIZED SAVINGS (1.99 FTE)</p>
+                    </div>
+                </div>
+
+                <!-- Project 3: Real-Time View of Key Performance Indicators (KPIs) -->
+                <div class="project-card bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <i data-lucide="eye" class="w-12 h-12 text-red-600"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900">Real-Time KPI Dashboard for Vendor Management</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">WFP Leadership Support and Vendor Metric Tracking</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Goal:</span> Implement a dashboard to give WFP leadership a real-time view of KPIs and volume trends for tickets.</li>
+                            <li><span class="font-semibold">Impact:</span> Efficiency gains through filtering by business unit and aged ticket monitoring.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 md:text-right">
+                        <p class="text-4xl font-extrabold text-[#10b981] leading-none">$38,899</p>
+                        <p class="text-sm font-medium text-gray-500">ANNUALIZED SAVINGS (0.52 FTE)</p>
+                    </div>
+                </div>
+
+                <!-- Project 4: Appeals Compliance and Assistance Tool (Original Project 2) -->
+                <div class="project-card bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <i data-lucide="check-square" class="w-12 h-12 text-purple-600"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900">Appeals Compliance and Assistance Tool</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Streamlined Review Process Automation (From Resume)</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Goal:</span> Implement a checklist-driven review process to ensure consistent, error-free resolution.</li>
+                            <li><span class="font-semibold">Impact:</span> Significant reduction in audit failures and increased compliance accuracy.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 md:text-right">
+                        <!-- Using previous figure from resume for consistency -->
+                        <p class="text-4xl font-extrabold text-[#10b981] leading-none">$280,000</p>
+                        <p class="text-sm font-medium text-gray-500">ANNUALIZED SAVINGS</p>
+                    </div>
+                </div>
+
+                <!-- Project 5: Automated Ticket Management (Overdue Tickets) -->
+                <div class="project-card bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <i data-lucide="send" class="w-12 h-12 text-orange-600"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900">Automated Ticket Management System (Overdue Alerts)</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Timely Ticket Lifecycle & Escalation Management</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Goal:</span> Send automated email alerts to ensure timely ticket management and flag lifecycle events.</li>
+                            <li><span class="font-semibold">Impact:</span> Notifying staff of overdue responses at 1 and 2-hour intervals for both new tickets and requester updates.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 md:text-right">
+                        <p class="text-4xl font-extrabold text-[#10b981] leading-none">$143,059</p>
+                        <p class="text-sm font-medium text-gray-500">ANNUALIZED SAVINGS (2.28 FTE)</p>
+                    </div>
+                </div>
+                
+                 <!-- Project 6: Quality Toolkit (End-to-end) (Original Project 3) -->
+                <div class="project-card bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <i data-lucide="clipboard-check" class="w-12 h-12 text-fuchsia-600"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900">Quality Toolkit (End-to-End)</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Automated Dashboard for Quality Framework</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Goal:</span> Enhance and automate audits, calibration, appeals, and reporting.</li>
+                            <li><span class="font-semibold">Impact:</span> Centralized quality management enhancing consistency and reducing manual reporting effort.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 md:text-right">
+                        <!-- Using previous figure from resume for consistency -->
+                        <p class="text-4xl font-extrabold text-[#10b981] leading-none">$170,000</p>
+                        <p class="text-sm font-medium text-gray-500">ANNUALIZED SAVINGS</p>
+                    </div>
+                </div>
+
+                <!-- Project 7: Product Area Dashboard (Original Project 4) -->
+                <div class="project-card bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <i data-lucide="layout-dashboard" class="w-12 h-12 text-indigo-600"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900">Legacy Product Area Dashboard</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Centralized Real-Time Insight Platform (From Resume)</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Goal:</span> A centralized platform providing leaders real-time insights for data-driven decisions.</li>
+                            <li><span class="font-semibold">Impact:</span> Enhanced visibility and support for strategic planning.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 md:text-right">
+                        <!-- Using previous figure from resume for consistency -->
+                        <p class="text-4xl font-extrabold text-[#10b981] leading-none">$300,000</p>
+                        <p class="text-sm font-medium text-gray-500">ANNUALIZED SAVINGS</p>
+                    </div>
+                </div>
+                
+                 <!-- Project 8: Quality Dashboard (Service Quality/Efficiency) -->
+                <div class="project-card bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <i data-lucide="award" class="w-12 h-12 text-yellow-600"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900">Centralized Quality & CSAT Dashboard</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Service Quality, Efficiency, and Customer Satisfaction Tool</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Goal:</span> Centralized dashboard providing real-time data on service quality, efficiency, and customer satisfaction (CSAT).</li>
+                            <li><span class="font-semibold">Impact:</span> Serves as the core reporting tool for the quality framework, meeting contractual requirements and client expectations.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 md:text-right">
+                        <p class="text-4xl font-extrabold text-[#10b981] leading-none">$123,623</p>
+                        <p class="text-sm font-medium text-gray-500">ANNUALIZED SAVINGS (1.93 FTE)</p>
+                    </div>
+                </div>
+                
+                <!-- Project 9: Communication Center (Volume/Visibility) -->
+                <div class="project-card bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <i data-lucide="messages-square" class="w-12 h-12 text-teal-600"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900">Communication Center Dashboard</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Real-Time Visibility into Chat Volume, Service Levels, & Agents</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Goal:</span> Give xWS leaders real-time visibility into chat volume, service levels, and agent availability.</li>
+                            <li><span class="font-semibold">Impact:</span> Improved management oversight and resource allocation based on real-time data.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 md:text-right">
+                        <p class="text-4xl font-extrabold text-[#10b981] leading-none">$249,364</p>
+                        <p class="text-sm font-medium text-gray-500">ANNUALIZED SAVINGS (3.9 FTE)</p>
+                    </div>
+                </div>
+                
+                 <!-- Project 10: AI Chatbot (Average Handle Time Reduction) -->
+                <div class="project-card bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <i data-lucide="message-square-text" class="w-12 h-12 text-cyan-600"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900">AI Chatbot for AHT Reduction</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Providing Instant Answers to Reduce Average Handle Time (AHT)</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Goal:</span> Provide specialists with instant answers from central documents to reduce search time and AHT.</li>
+                            <li><span class="font-semibold">Impact:</span> Improves agent speed and proficiency/accuracy using an AI-powered Knowledge Base/chatbot.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 md:text-right">
+                        <p class="text-4xl font-extrabold text-[#10b981] leading-none">$203,233</p>
+                        <p class="text-sm font-medium text-gray-500">ANNUALIZED SAVINGS (3.28 FTE)</p>
+                    </div>
+                </div>
+
+                <!-- Project 11: Automated VM Readouts -->
+                <div class="project-card bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <i data-lucide="zap" class="w-12 h-12 text-lime-600"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900">Automated VM Readouts</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Automation for All PA Insights (26 PAs on a Weekly Basis)</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Goal:</span> Automate VM readouts for 26 PAs on a weekly basis.</li>
+                            <li><span class="font-semibold">Impact:</span> Reduces the manual effort required to generate and distribute Vendor Management (VM) insights.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 md:text-right">
+                        <p class="text-4xl font-extrabold text-[#10b981] leading-none">$56,471</p>
+                        <p class="text-sm font-medium text-gray-500">ANNUALIZED SAVINGS (2.84 FTE)</p>
+                    </div>
+                </div>
+
+                <!-- Project 12: Automated Smart Testing & Reporting (GenAI) -->
+                <div class="project-card bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <i data-lucide="cpu" class="w-12 h-12 text-amber-600"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900">GenAI Automated Smart Testing & Reporting</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Tool to Automate Knowledge Assessment and Change Management</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Goal:</span> Implement an Automated Smart Testing & Reporting Analytics tool powered by GenAI that leverages Notebook LM.</li>
+                            <li><span class="font-semibold">Impact:</span> Automatically maps the existing manual PKT process (which involves question creation, review, and reporting).</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 md:text-right">
+                        <p class="text-4xl font-extrabold text-[#10b981] leading-none">$269,564</p>
+                        <p class="text-sm font-medium text-gray-500">ANNUALIZED SAVINGS (1.98 FTE)</p>
+                    </div>
+                </div>
+                
+                 <!-- Project 13: Team Graph Dashboard (Original Project 5) -->
+                <div class="project-card bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <i data-lucide="users-round" class="w-12 h-12 text-gray-600"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900">Team Graph Dashboard</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Automated Migration Readiness Tracker (From Resume)</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Goal:</span> Automated tracker reduces effort and improves migration readiness.</li>
+                            <li><span class="font-semibold">Impact:</span> Provided real-time updates, minimizing risks associated with team migrations.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 md:text-right">
+                        <!-- Using previous figure from resume for consistency -->
+                        <p class="text-4xl font-extrabold text-[#10b981] leading-none">$250,000</p>
+                        <p class="text-sm font-medium text-gray-500">ANNUALIZED SAVINGS</p>
+                    </div>
+                </div>
+                
+                <!-- Placeholder for Initiatives with TBA Savings -->
+                 <div class="p-6 bg-yellow-50 rounded-xl shadow-lg border-l-4 border-yellow-600 mt-10">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i data-lucide="lightbulb" class="w-7 h-7 mr-2 text-yellow-600"></i> Additional High-Impact Initiatives
+                    </h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-3">
+                        <li>
+                            <span class="font-semibold">Vendor Onboarding & Operations Video Series:</span> Creation of interactive video podcasts focusing on Vendor Onboarding & Operations, covering topics like Worker Transfers (SOW, VTV, IDV), ID & Password Scheduling, and Compliance Document Sync issues.
+                        </li>
+                        <li>
+                            <span class="font-semibold">Unstructured Onboarding Intake Form Optimization:</span> Solution to optimize the current unstructured onboarding intake form by transforming manual and structured fields into mandatory fields, prioritizing requirements, and establishing formal SLAs for internal dependencies.
+                        </li>
+                        <li>
+                            <span class="font-semibold">Automated GVC Intake Request Workflow:</span> Automated triage system that sends an instant email notification to the Workforce Planning (WFP) Triage team when a new GVC intake request is submitted, eliminating the need for inefficient manual queue monitoring.
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+
+            <div class="text-center mt-12">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Grand Total Estimated Annualized Savings Delivered</h3>
+                <p class="text-5xl font-extrabold text-red-600">$3,726,000+</p>
+                <p class="text-gray-500 mt-2">from listed key transformation projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section id="case-study" class="py-20 bg-[#f0f9ff]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Case Study: Enterprise Operational Insights & Automation Suite</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A look at a solution designed specifically for US Dental Depot to manage liability, eliminate penalties, and drive proactive management.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-2xl border-t-4 border-blue-600">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Column 1: Challenge -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-red-600 mb-4 flex items-center"><i data-lucide="alert-triangle" class="w-6 h-6 mr-2"></i> The Challenge</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Hidden Liability:</span> Critical due dates buried in static spreadsheets.</li>
+                            <li><span class="font-semibold">Reactive Firefighting:</span> Bills known to be late only after the penalty is applied.</li>
+                            <li><span class="font-semibold">Manual Fatigue:</span> Hours wasted manually checking statuses instead of focusing on strategy.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Solution & Features -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-600 mb-4 flex items-center"><i data-lucide="zap" class="w-6 h-6 mr-2"></i> The AMIE Solution</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Operational Insights Dashboard:</span> Real-time liability breakdown, overdue amounts, total penalty, and cash flow requirements.</li>
+                            <li><span class="font-semibold">Automated Daily Liability Bot:</span> Runs 24/7 via Google Apps Script, sending a prioritized, actionable email (Critical, Action Needed, Due Today).</li>
+                            <li><span class="font-semibold">Tech Advantage:</span> Built entirely on the native Google Workspace (Sheets, Apps Script, Looker Studio).</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 3: ROI & Value -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-green-600 mb-4 flex items-center"><i data-lucide="dollar-sign" class="w-6 h-6 mr-2"></i> Value & Financial ROI</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li><span class="font-semibold">Eliminate Penalties:</span> Current annual penalties estimated at over $12,000+.</li>
+                            <li><span class="font-semibold">Total Investment:</span> <span class="text-lg font-bold text-red-500">$9,000 (One-time)</span></li>
+                            <li><span class="font-semibold">Recurring Software Costs:</span> <span class="text-lg font-bold text-green-500">$0</span> (Native Google Workspace).</li>
+                            <li><span class="font-semibold">Payback Period:</span> <span class="text-lg font-bold">Less than 9 Months.</span> (Solution is self-funding.)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Mockup/Placeholder -->
+            <div class="mt-12 text-center">
+                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Solution Visualization: Operational Insights Dashboard</h4>
+                <div class="bg-gray-100 p-6 rounded-xl border border-gray-300">
+                    <img src="https://placehold.co/800x400/3b82f6/ffffff?text=US+Dental+Depot+Operational+Insights+Dashboard+MOCKUP" alt="Dashboard Mockup showing liability, overdue amounts, and cash flow requirements" class="w-full rounded-lg shadow-inner">
+                    <p class="text-sm text-gray-500 mt-2">The dashboard provides instant visualization of financial risk, moving data from static spreadsheets to actionable intelligence.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact Section -->
+    <section id="contact" class="py-20 hero-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Ready to Transform Your Business?</h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Whether you need process optimization, KPI dashboards, or expert training, let's discuss how to achieve your next level of operational excellence.
+            </p>
+
+            <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-8 justify-center">
+                <div class="flex items-center space-x-3 bg-white text-gray-800 p-4 rounded-xl shadow-lg">
+                    <i data-lucide="mail" class="w-6 h-6 text-[#10b981]"></i>
+                    <span class="font-medium">amiepimentell01@gmail.com</span>
+                </div>
+                <div class="flex items-center space-x-3 bg-white text-gray-800 p-4 rounded-xl shadow-lg">
+                    <i data-lucide="phone" class="w-6 h-6 text-[#10b981]"></i>
+                    <span class="font-medium">+639931223905</span>
+                </div>
+            </div>
+
+            <a href="mailto:amiepimentell01@gmail.com" class="mt-8 inline-block px-10 py-4 bg-white text-[#10b981] font-bold text-lg rounded-full shadow-2xl hover:bg-gray-100 transition duration-300">
+                Start a Conversation Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <!-- AMIE Logo Text Placeholder -->
+            <p class="amie-logo-text !text-white !text-xl mb-1">AMIE</p>
+            <p class="amie-slogan-text !text-emerald-400 mb-3">Align. Measure. Innovate. Empower.</p>
+            <p>&copy; 2024 Amie Claire Pimentel. Business Transformation & Process Excellence Freelancer.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Close menu when a link is clicked (for better UX)
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Simple scroll spy to update header color on scroll (optional)
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-white', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-white', 'shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
